@@ -2,11 +2,11 @@
 Kelompok HealthLarious - Mata Kuliah Pemrograman Web SE-04-01
 
 ## Nama Anggota
-- Damasya Ine Larisa (12o121ooo3)
-- RyanAdi Saputra (1201210006)
+- Damasya Ine Larisa (1201210003)
+- Ryan Adi Saputra (1201210006)
 - Adam Sholihuddin (1201210010)
 - Michael Steven Lie (1201210017)
-- YafiYoga Abid Pramono (1201210022)
+- Yafi Yoga Abid Pramono (1201210022)
 
 # Tema:
 Good Health and Well-being
