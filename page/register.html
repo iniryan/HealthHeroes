@@ -8,10 +8,10 @@
 	<link rel="stylesheet" href="../assets/css/ryan.css">
 </head>
 <body>
-	<div class="container">
-        <div class="box">
+	<div class="container signcontainer">
+        <div class="box signbox">
             <div class="inner-box">
-                <div class="left">
+                <div class="left-sign">
 					<form method="get" action="register.html">
                         <div class="heading-right">
                             <h1>Sign up</h1>
@@ -21,29 +21,32 @@
                             </h6>
                         </div>
                         <div class="input-wrap">
+                            <label>Full Name</label>
+                            <input type="text" name="fullname" minlength="4" placeholder="John Doe" class="input-field" autocomplete="off" required/>
+                        </div>
+                        <div class="input-wrap">
+                            <label>Username</label>
+                            <input type="text" name="username" minlength="4" placeholder="johnD" class="input-field" autocomplete="off" required/>
+                        </div>
+                        <div class="input-wrap">
                             <label>Email</label>
                             <input type="email" name="email" minlength="4" placeholder="example@test.com" class="input-field" autocomplete="off" required/>
                         </div>
-                        
 						<div class="input-wrap">
                             <label>Password</label>
                             <input type="password" name="password" minlength="4" placeholder="••••••••" class="input-field" autocomplete="off" required/>
                         </div>
                         <div class="input-wrap">
-                            <label>Password</label>
-                            <input type="password" name="password" minlength="4" placeholder="••••••••" class="input-field" autocomplete="off" required/>
+                            <label>Confirm Password</label>
+                            <input type="password" name="password2" minlength="4" placeholder="••••••••" class="input-field" autocomplete="off" required/>
                         </div>
 
                         <div class="input-wrap">
-                            <button type="submit" value="login" class="btn-login">Log in</button>
+                            <button type="submit" value="signup" class="btn-signup">Sign up</button>
                         </div>
-
-                        <p class="text">
-                            <a href="#">Lupa Password?</a>
-                        </p>
                     </form>
                 </div>
-                <div class="right">
+                <div class="right-sign">
 
                 </div>
             </div>
