@@ -7,7 +7,7 @@
     font-family: "Poppins", sans-serif;
 }
 
-.container {
+.container, .formPencarian {
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -26,6 +26,11 @@
     background-color: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0 60px 40px -30px rgba(0, 0, 0, 0.27);
+}
+
+.wrape {
+    width: 100%;
+    text-align: center;
 }
 
 .signcontainer {
@@ -166,7 +171,7 @@ label {
     color: #6E6E70;
 }
 
-.btn-login, .btn-signup {
+.btn-login, .btn-signup, .btn-search {
     width: 100%;
     height: 42px;
     background-color: #252525;
@@ -179,7 +184,7 @@ label {
     cursor: pointer;
 }
   
-.btn-login:hover, .btn-signup:hover {
+.btn-login:hover, .btn-signup:hover, .btn-search:hover {
     background-color: #3B37FE;
 }
   
@@ -214,7 +219,16 @@ label {
     left: 45%;
     top: 0;
     background-color: #3B37FE;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px;
+}
+
+.search {
+   padding: 24px;
+}
+
+.btn-search {
+    margin-top: 32px;
+    margin-bottom: 32px;
 }
 
 @media screen and (max-width: 1024px) {
