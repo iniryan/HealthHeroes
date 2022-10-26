@@ -1,0 +1,99 @@
+*{
+	font-family: 'Poppins', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+
+body{
+	background-color: #D6DCE8;
+	padding: 48px;
+}	
+
+.wrap{
+	width: 40%;
+	margin: auto;
+	background-color: white;
+	border-radius: 10px;
+	padding: 24px;
+
+}
+
+input, .input-field, .daftar, .batal {
+	padding: 14px;
+	border-radius: 14px;
+	border: 2px solid gray;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	background:white;
+}
+
+.input-label {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+}
+
+.Register{
+	background-color: #3B37FE;
+	cursor: pointer;
+	color: white;
+	font-weight: 600;
+}
+.Batal {
+	background-color: white;
+	cursor: pointer;
+	font-weight: 600;
+
+}
+
+ .input-label .radio-box{
+	display: flex;
+	flex-direction: row;
+	padding: 12px;
+	align-items: center;
+}	
+
+.radio-box .radio{
+	margin-left: 10px;
+	
+}
+
+.input-radio .radio-box{
+	display: flex;
+	flex-direction: row;
+	/*background-color: white;*/
+}
+
+.button-wrap{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+
+}
+
+button{
+
+	width: 65px;
+	height: 35px;
+	margin-left:10px;
+	background-color: blue;
+	border-radius: 10px;
+	padding: 3px;
+	align-items: center;
+
+}
+
+label{
+	margin-bottom: 10px;
+}
+
+.input-label{
+	margin-top: 10px;
+}
+.input-radio, .radio-box{
+	display: flex;
+	flex-direction: row;
+	padding: 5px;
+}

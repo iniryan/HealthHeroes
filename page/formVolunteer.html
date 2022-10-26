@@ -2,66 +2,75 @@
 <html>
 <head>
 	<title>Form Pendaftaran Volunteer</title>
+	<link rel="stylesheet" type="text/css" href="../assets/css/michael.css">
 </head>
 <body>
+	<div class="wrap">
+	<div class="container">
 	<h1>Form Biodata Volunteer</h1>
-	<form method="get" action="formVolunteer.html">
-		<p>
-			<label>Nama Lengkap</label> <br>
-			<input type="text" name="FirstName" placeholder="Nama Lengkap">
-		</p>
-		<p>
-			<label>Date Of Birth</label> <br>
-			<input type="date" name="date" placeholder="Date Of Birth">
-		</p>
-		<p>
-			<label>Gender</label><br>
-				<input type="radio" name="jenis_kelamin" id="" value="laki-laki">Laki-laki
-				<input type="radio" name="jenis_kelamin" id="" value="perempuan">Perempuan
-			</p>
-		<p>
-			<label>kota kelahiran</label> <br>
-			<input type="text" name="kotaLahir" placeholder="kota kelahiran">
-		</p> 
-		<p>
-			<label>Alamat Rumah</label> <br>
-			<textarea name="AlamatRumah" id="" cols="30" rows="10"></textarea>
-		</p> 
-		<p>
-			<label>Kota</label> <br>
-			<select name="Kota">
-				<option value="Sidoarjo">Sidoarjo</option>
-				<option value="Surabaya">Surabaya</option>
-				<option value="Gresik">Gresik</option>
-				<option value="Lamongan">Lamongan</option>
-				<option value="Pasuruan">Pasuruan</option>
-				<option value="Malang">Malang</option>
-				<option value="Kediri">Kediri</option>
-				<option value="Nganjuk">Nganjuk</option>
-			</select>
-		</p> 
-		<p>
-			<label>Kode Pos</label><br>
-			<input type="text" name="Kode Pos" placeholder="Kode Pos">
-		</p>
-		<p>
-			<label>Phone</label> <br>
-			<input type="text" name="Phone" placeholder="Phone">
-		</p> 
-		<p>
-			<label>Email</label> <br>
-			<input type="text" name="Email" placeholder="Email">
-		</p> 
-		<p>
-			<label>NIK</label> <br>
-			<input type="text" name="nik" placeholder="NIK">
-		</p> 
-		<p>
-			<label>NO Kartu Keluarga</label> <br>
-			<input type="text" name="text" placeholder="No Kartu Keluarga">
-		</p> 
-		<button type="submit">Submit</button>
-	</form>
+	
+	<Form method="volunter" action="">
+			<div class="input-label">
+				<label>Nama Lengkap</label> <br>
+				<input type="Text" name="FirstName" placeholder="Nama Lengkap">
+			</div>
+					<div class="input-label">
+				<label>Kota Kelahiran</label> <br>
+				<input type="text" name="text" placeholder="Kota Kelahiran">
+			<div class="input-label">
+				<label>Date Of Birth</label> <br>
+				<input type="date" name="date" placeholder="Date Of Birth">
+			</div>
+			<div class="input-radio">
+				<label>Gender</label><br>
+				<div class="radio-box">Laki laki<input type="radio" name="jenis_kelamin" value="Laki Laki"></div>   
+				<div class="radio-box">Perempuan<input type="radio" name="jenis_kelamin" value="Perempuan"></div>
+				</div>
+			<div class="input-label">
+				<label>Alamat Rumah</label> <br>
+				<textarea type ="text" name="AlamatRumah" placeholder="Masukkan Alamat Rumah" class="input-field"></textarea>
+			</div>
+			<div class="input-label">
+				<label>Kota</label> <br>
+				<select name="Kota" class="input-field">
+					<option value="--Pilih Kota---">---Pilih Kota---</option>
+					<option value="Sidoarjo">Sidoarjo</option>
+					<option value="Surabaya">Surabaya</option>
+					<option value="Gresik">Gresik</option>
+					<option value="Lamongan">Lamongan</option>
+					<option value="Pasuruan">Pasuruan</option>
+					<option value="Malang">Malang</option>
+					<option value="Kediri">Kediri</option>
+					<option value="Nganjuk">Nganjuk</option>
+
+				</select>
+			</div> 
+			<div class="input-label">
+				<label>No Hp</label> <br>
+				<input type="No Hp" name="No Hp" placeholder="No Hp">
+			</div>
+			<div class="input-label">
+				<label>Email</label> <br>
+				<input type="text" name="Email" placeholder="Email">
+			</div> 
+			<div class="input-label">
+				<label>NIK</label> <br>
+				<input type="nik" name="nik" placeholder="Masukan NIK">
+			</div> 
+	
+			<div class="input-label">
+				<label>No Kartu Keluarga</label> <br>
+				<input type="text" name="text" placeholder="Masukkan No Kartu Keluarga">
+			</div>
+			<div class="button-wrap">
+			<button type="Submit" name="Submit" class="Register" >Register</button>
+
+			<button type="Batal" name="Batal" class="Batal">Batal</button>
+		</div>
+		</fieldset>
+	</Form>
+</div>
+</div>
 
 
 </body>
