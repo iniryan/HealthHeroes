@@ -1,0 +1,84 @@
+*{
+	font-family: 'Poppins', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+.container h1{
+	text-align: center;
+	margin-bottom: 25px;
+}
+body{
+	background-color: #D6DCE8;
+	padding: 48px;
+}	
+
+.wrap{
+	width: 40%;
+	margin: auto;
+	background-color: white;
+	border-radius: 10px;
+	padding: 24px;
+
+}
+
+.container{
+	padding: 5px;
+}
+
+input, .input-field, .daftar, .batal {
+	padding: 12px;
+	border-radius: 12px;
+	border: 1px solid gray;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background:none;
+}
+
+.input-box {
+	display: flex;
+	flex-direction: column;
+}
+
+.daftar{
+	background-color: #3B37FE;
+	cursor: pointer;
+	color: white;
+	font-weight: 600;
+}
+.batal{
+	background-color: #3B37FE;
+	cursor: pointer;
+	color: white;
+	font-weight: 600;
+}
+
+ .input-box .radio-box{
+	display: flex;
+	flex-direction: row;
+	padding: 12px;
+	align-items: center;
+}
+
+.radio-box .radio{
+	margin-left: 20px;
+	
+}
+
+.input-box .radio-wrap{
+	display: flex;
+	flex-direction: row;
+}
+
+.button-wrap{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+
+}
+
+button{
+	width: 200px;
+	height: auto;
+	margin-left:20px;
