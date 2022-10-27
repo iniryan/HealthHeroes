@@ -9,12 +9,14 @@
 </head>
 <body>
     <div class="berita">
-        <h1>Create Berita</h1>
+        <h1 class="CB">Create Berita</h1>
         <form method="get" action="formBerita.html">
             <p>Judul Berita</p>
                 <input type="text" name="judulBerita" placeholder="" required="required" />
+                <div class="upload">
             <p>thumbnail</p>
                 <input type="file" name="thumbnail" placeholder="" required="required" />
+                </div>
             <p>Kategori</p>
                 <input type="text" name="kategori" placeholder="" required="required" />
             <p>Isi Berita</p>
@@ -26,7 +28,7 @@
             <p>Tag</p>
                 <textarea name="tag" id="tag" cols="30" rows="10"></textarea>
             <p></p>
-            <button type="submit">Submit</button>
+            <button type="submit" class="buton">Submit</button>
         </form>
 </body>
 </html>
