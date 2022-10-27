@@ -59,6 +59,8 @@ input:hover, textarea:hover {
 }
 .upload img{
 	width: 40%;
+	float: left;
+	margin-bottom: 12px;
 
 }
 .upload{ 
