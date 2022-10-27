@@ -57,3 +57,15 @@ input:hover, textarea:hover {
 .CB{
 	font-size: 35px;
 }
+.upload img{
+	width: 40%;
+
+}
+.upload{ 
+	display:flex;
+	flex-direction: column;
+}
+
+.imgimg {
+	width: 100%;
+}
