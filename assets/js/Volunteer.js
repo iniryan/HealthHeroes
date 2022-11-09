@@ -1,6 +1,7 @@
 class DataVolunteer {
-    constructor (nama, kota_kelahiran, tanggal_lahir, gender, alamat_rumah, kota, no_hp, email, nik, no_kk) {
-    
+    constructor (id, nama, kota_kelahiran, tanggal_lahir, gender, alamat_rumah, kota, no_hp, email, nik, no_kk) {
+        
+        this.id = id;
         this.nama = nama;
         this.kota_kelahiran = kota_kelahiran;
         this.tanggal_lahir = tanggal_lahir;
@@ -13,7 +14,7 @@ class DataVolunteer {
         this.no_kk = no_kk;
     }
 
-    addEvent(id) {
+    addEvent() {
         console.log( 'can add Event');
     }
 
