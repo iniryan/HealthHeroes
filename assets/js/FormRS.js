@@ -9,26 +9,26 @@ class formRumahSakit{
         this.Telepon = Telepon;
     }
     addRumahSakit(){
-        console.log('', 'can add rumahSakit');
+        console.log('can add rumahSakit');
     }
 
     editRumahSakit(){
-        console.log('', 'can edit rumah sakit')
+        console.log('can edit rumah sakit')
     }
 
     deleteRumahSakit(){
-        console.log('', 'can delete rumah sakit')
+        console.log('can delete rumah sakit')
     }
 
     findRumahSakit(){
-        console.log('', 'can find rumah sakit')
+        console.log('can find rumah sakit')
     }
 
     getRumahSakit(){
-        console.log('', 'can get rumah sakit')
+        console.log('can get rumah sakit')
     }
 
     changedataRumahSakit(){
-        console.log('', 'can cange data rumah sakit');
+        console.log('can cange data rumah sakit');
     }
 }
