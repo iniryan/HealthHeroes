@@ -1,5 +1,6 @@
 class formRumahSakit{
-    constructor(NamaRumahSakit, Alamat, Fasilitas, Deskripsi, Website, Email, Telepon){
+    constructor(id,NamaRumahSakit, Alamat, Fasilitas, Deskripsi, Website, Email, Telepon){
+        this.id = id;
         this.NamaRumahSakit = NamaRumahSakit;
         this.Alamat = Alamat;
         this.Fasilitas = Fasilitas;
@@ -12,15 +13,15 @@ class formRumahSakit{
         console.log('can add rumahSakit');
     }
 
-    editRumahSakit(){
-        console.log('can edit rumah sakit')
+    editRumahSakit(id){
+        console.log('''can edit rumah sakit')
     }
 
-    deleteRumahSakit(){
+    deleteRumahSakit(id){
         console.log('can delete rumah sakit')
     }
 
-    findRumahSakit(){
+    findRumahSakit(id){
         console.log('can find rumah sakit')
     }
 
@@ -28,7 +29,7 @@ class formRumahSakit{
         console.log('can get rumah sakit')
     }
 
-    changedataRumahSakit(){
+    changedataRumahSakit(id){
         console.log('can cange data rumah sakit');
     }
 }
