@@ -13,11 +13,11 @@ class DataVolunteer {
         this.no_kk = no_kk;
     }
 
-    addEvent() {
+    addEvent(id) {
         console.log( 'can add Event');
     }
 
-    deleteEvent() {
+    deleteEvent(id) {
         console.log( 'can delete Event');
     }
 
@@ -25,15 +25,15 @@ class DataVolunteer {
         console.log( 'can get Data Volunteer');
     }
     
-    findVolunteer() {
+    findVolunteer(id) {
         console.log( 'can find Volunteer');
+    }
+        
+    changeDataVolunteer(id) {
+        console.log( 'can change data pendonor');
     }
     
     inputEvent() {
         console.log( 'can input Event');
-    }
-
-    changeDataVolunteer() {
-        console.log( 'can change data pendonor');
     }
 }
