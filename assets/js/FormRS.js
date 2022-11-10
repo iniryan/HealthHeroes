@@ -14,7 +14,7 @@ class formRumahSakit{
     }
 
     editRumahSakit(id){
-        console.log('''can edit rumah sakit')
+        console.log('can edit rumah sakit')
     }
 
     deleteRumahSakit(id){
