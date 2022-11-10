@@ -27,20 +27,13 @@ class News {
     getNews() {
         console.log('can get news');
     }
-    addcattegory() {
-        console.log('can add cattegory');
+    like() {
+        console.log('user can like');
     }
-    deletecattegory(id) {
-        console.log('can delete cattegory');
+    comment() {
+        console.log('user can comment');
     }
-    updatecattegory(id) {
-        console.log('can update cattegory');
+    share() {
+        console.log('user can share');
     }
-    findcattegory(id) {
-        console.log('can  find cattegory');
-    }
-    getcattegory() {
-        console.log('can get cattegory');
-    }
-    
 }
