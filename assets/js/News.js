@@ -37,3 +37,20 @@ class News {
         console.log('user can share');
     }
 }
+
+
+let createBerita = document.getElementById('CreateBerita');
+
+createBerita.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let judulBerita = document.getElementById('judulBerita').value;
+    let thumbnail = document.getElementById('thumbnail').value;
+    let kategori = document.getElementById('kategori').value;
+    let isiBerita = document.getElementById('isiBerita').value;
+    let author = document.getElementById('author').value;
+    let tanggalWaktu = document.getElementById('tanggalDibuat').value;
+    let tag = document.getElementById('tag').value;
+
+    let news = new News(judulBerita, thumbnail, kategori, isiBerita, author, tanggalWaktu, tag);
+    console.log(news);
+});
