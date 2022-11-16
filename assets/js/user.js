@@ -9,8 +9,17 @@ class User {
         this.dateCreated = dateCreated;
     }
 
-    login() {
-        console.log(this.email, 'just logged in');
+    login(email, password) {
+        // this.email = 'test@gmail.com';
+        // this.password = '1234567890';
+        // if (this.email == email && this.password == password) {
+        //     window.location.href = '../../page/home.html';
+        //     console.log(this.email, 'just logged in');
+            
+        // }else{
+        //     console.log('Wrong email or password');
+
+        // }
     }
 
     signup() {
@@ -64,16 +73,31 @@ class Administrator extends User {
 }
 
 //testing
-const admin = new Administrator(1, 'test@gmail.com', 'johnDoe', 'John Doe', '1234567', 'admin', '2022-11-09');
-admin.signup();
-admin.login();
-admin.getUser();
-admin.findUser(1);
-admin.editUser(1);
-admin.changeRoleUser(1);
-admin.blockUser(1);
-admin.deleteUser(1);
-admin.forgotPassword();
-admin.changePassword();
-admin.logout();
+let signForm = document.getElementById('sign-form');
+
+signForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let fullname = document.getElementById('fullname').value;
+    let username = document.getElementById('username').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let password2 = document.getElementById('password2').value;
+    let role = "User";
+    let date = new Date();
+    let signup = new User(1, email, fullname, username, password, role, date);
+    console.log(signup);
+});
+
+// let loginForm = document.getElementById('login-form');
+
+// loginForm.addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     let email = document.getElementById('email').value;
+//     let password = document.getElementById('password').value;
+//     let user = new User(1, email, 'UsernameTest', 'FullnameTest', password, 'User', '2022-11-16');
+//     console.log(user);
+//     // user.login(email, password);
+// });
+
+
 
