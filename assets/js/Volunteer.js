@@ -38,3 +38,26 @@ class DataVolunteer {
         console.log( 'can input Event');
     }
 }
+
+let FormRS = document.getElementById('FormRS');
+
+FormRS.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let nama = document.getElementById('nama').value;
+    let kota_kelahiran = document.getElementById('kota_kelahiran').value;
+    let tanggal_lahir = document.getElementById('tanggal_lahir').value;;
+    let alamat_rumah = document.getElementById('alamat_rumah').value;
+    let kota = document.getElementById('kota').value;
+    let no_hp = document.getElementById('no_hp').value;
+    let email = document.getElementById('email').value;
+    let nik = document.getElementById('nik').value;
+    let no_kk = document.getElementById('no_kk').value;
+    let checkedValue = null; 
+    let gender = document.querySelectorAll('input[name="gender"]:checked');
+    let genderValue = [];
+    gender.forEach((checkbox) => {
+        genderValue.push(checkbox.value);
+    });
+    let addVolunteer = new Volunteer(1, nama, kota_kelahiran, tanggal_lahir, alamat_rumah, kota, no_hp, email, nik, no_kk, genderValue);
+    console.log(addVolunteer);
+});
