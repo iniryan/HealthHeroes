@@ -9,17 +9,17 @@
 	<div class="container">
 	<h1>Form Biodata Volunteer</h1>
 	
-	<Form method="get" action="../page/formVolunteer.html">
+	<Form method="post" id="Volunteer" action="../page/formVolunteer.html">
 			<div class="input-label">
 				<label>Nama Lengkap</label> <br>
-				<input type="Text" name="FirstName" placeholder="Nama Lengkap">
+				<input type="Text" id="nama" name="FirstName" placeholder="Nama Lengkap">
 			</div>
 					<div class="input-label">
 				<label>Kota Kelahiran</label> <br>
-				<input type="text" name="text" placeholder="Kota Kelahiran">
+				<input type="text" id="kota_kelahiran" name="text" placeholder="Kota Kelahiran">
 			<div class="input-label">
 				<label>Date Of Birth</label> <br>
-				<input type="date" name="date" placeholder="Date Of Birth">
+				<input type="date" id='tanggal_lahir" name="date" placeholder="Date Of Birth">
 			</div>
 			<div class="input-radio">
 				<label>Gender</label><br>
@@ -28,11 +28,11 @@
 				</div>
 			<div class="input-label">
 				<label>Alamat Rumah</label> <br>
-				<textarea type ="text" name="AlamatRumah" placeholder="Masukkan Alamat Rumah" class="input-field"></textarea>
+				<textarea type ="text" id="alamat_rumah" name="AlamatRumah" placeholder="Masukkan Alamat Rumah" class="input-field"></textarea>
 			</div>
 			<div class="input-label">
 				<label>Kota</label> <br>
-				<select name="Kota" class="input-field">
+				<select name="Kota" id="kota" class="input-field">
 					<option value="--Pilih Kota---">---Pilih Kota---</option>
 					<option value="Sidoarjo">Sidoarjo</option>
 					<option value="Surabaya">Surabaya</option>
@@ -47,20 +47,20 @@
 			</div> 
 			<div class="input-label">
 				<label>No Hp</label> <br>
-				<input type="No Hp" name="No Hp" placeholder="No Hp">
+				<input type="No Hp" id="no_hp" name="No Hp" placeholder="No Hp">
 			</div>
 			<div class="input-label">
 				<label>Email</label> <br>
-				<input type="text" name="Email" placeholder="Email">
+				<input type="text" id="email" name="Email" placeholder="Email">
 			</div> 
 			<div class="input-label">
 				<label>NIK</label> <br>
-				<input type="nik" name="nik" placeholder="Masukan NIK">
+				<input type="nik" id="nik" name="nik" placeholder="Masukan NIK">
 			</div> 
 	
 			<div class="input-label">
 				<label>No Kartu Keluarga</label> <br>
-				<input type="text" name="text" placeholder="Masukkan No Kartu Keluarga">
+				<input type="text" id="no_kk" name="text" placeholder="Masukkan No Kartu Keluarga">
 			</div>
 			<div class="button-wrap">
 			<button type="Submit" name="Submit" class="Register" >Register</button>
