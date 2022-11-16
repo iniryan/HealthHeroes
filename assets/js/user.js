@@ -13,6 +13,7 @@ class User {
         console.log(this.email, 'just signed up');
         try {
             window.location.href = '../../page/login.html';
+            //set session local storage
             localStorage.setItem('user', JSON.stringify(this));
         } catch (error) {
             console.log(error);
@@ -23,7 +24,6 @@ class User {
         console.log(this.email, 'just logged in');
         try {
             window.location.href = '../../page/home.html';
-            localStorage.setItem('user', JSON.stringify(this));
         } catch (error) {
             console.log(error);
         }
@@ -117,6 +117,7 @@ if (login) {
 //login validation
 function loginValidation(e) {
     e.preventDefault();
+    //get session local storage
     let user = JSON.parse(localStorage.getItem('user'));
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -131,9 +132,13 @@ function loginValidation(e) {
 
 //testing logout
 function logout() {
+    //get session local storage
     let user = JSON.parse(localStorage.getItem('user'));
     user = new User(user.id, user.email, user.username, user.fullname, user.password, user.role, user.dateCreated);
     user.logout();
+    //session local storage clear
     localStorage.clear();
     window.location.href = '../../pages/login.html';
 }
+
+//testing
