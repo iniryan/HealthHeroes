@@ -8,22 +8,25 @@ class User {
         this.role = role;
         this.dateCreated = dateCreated;
     }
-
-    login(email, password) {
-        // this.email = 'test@gmail.com';
-        // this.password = '1234567890';
-        // if (this.email == email && this.password == password) {
-        //     window.location.href = '../../page/home.html';
-        //     console.log(this.email, 'just logged in');
-            
-        // }else{
-        //     console.log('Wrong email or password');
-
-        // }
-    }
-
+    
     signup() {
         console.log(this.email, 'just signed up');
+        try {
+            window.location.href = '../../page/login.html';
+            localStorage.setItem('user', JSON.stringify(this));
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+    login() {
+        console.log(this.email, 'just logged in');
+        try {
+            window.location.href = '../../page/home.html';
+            localStorage.setItem('user', JSON.stringify(this));
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     logout() {
@@ -35,69 +38,102 @@ class User {
     }
 }
 
-class Administrator extends User {
-    constructor(id, email, username, fullname, password, role, dateCreated) {
-        super(id, email, username, fullname, password, role, dateCreated);
-    }
+/* *******************************TESTING******************************** */
 
-    deleteUser(id) {
-        console.log('User was deleted');
-    }
+//testing signup
+const signup = document.getElementById('signup-form');
 
-    blockUser(id) {
-        console.log('User was blocked');
-    }   
-
-    editUser(id) {
-        console.log('User was edited');
-    }
-    
-    findUser(id) {
-        console.log('User was found');
-    }
-    
-    changeRoleUser(id) {
-        console.log('User role was changed');
-    }
-
-    changePassword() {
-        console.log('Admin Password was changed');
-    }
-
-    getUser() {
-        console.log('User data was fetched');
-    }  
-
-    //can access volunteer.js, news.js, datapendonor.js, pencaridonor.js, rs.js to manage the data 
-
+//check null or not
+if (signup) {
+    signup.addEventListener('submit', formValidation);
 }
 
-//testing
-let signForm = document.getElementById('sign-form');
+//validate email or using html attribute type="email"
+// const validateEmail = (email) => {
+//     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return re.test(String(email).toLowerCase());
+// }
 
-signForm.addEventListener('submit', (e) => {
+//validate password
+const validatePassword = (password) => {
+    const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+    return re.test(password);
+}
+
+//match password checking
+const matchPassword = (password, confirmPassword) => {
+    if (password === confirmPassword) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//form validation
+function formValidation(e) {
     e.preventDefault();
-    let fullname = document.getElementById('fullname').value;
-    let username = document.getElementById('username').value;
-    let email = document.getElementById('email').value;
-    let password = document.getElementById('password').value;
-    let password2 = document.getElementById('password2').value;
-    let role = "User";
-    let date = new Date();
-    let signup = new User(1, email, fullname, username, password, role, date);
-    console.log(signup);
-});
+    
+    //count id 
+    const uid = (() => (id = 1, () => id++))();
+    
+    //get form values
+    const email = document.getElementById('email').value;
+    // if (!validateEmail(email)) {
+        //     console.log('Please enter a valid email');
+        //     return;
+        // }
 
-// let loginForm = document.getElementById('login-form');
+    const username = document.getElementById('username').value;
+    const fullname = document.getElementById('fullname').value;
 
-// loginForm.addEventListener('submit', function(e) {
-//     e.preventDefault();
-//     let email = document.getElementById('email').value;
-//     let password = document.getElementById('password').value;
-//     let user = new User(1, email, 'UsernameTest', 'FullnameTest', password, 'User', '2022-11-16');
-//     console.log(user);
-//     // user.login(email, password);
-// });
+    const password = document.getElementById('password').value;
+    if (!validatePassword(password)) {
+        alert('Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter and one number');
+        return;
+    }
 
+    const confirmPassword = document.getElementById('confirm-password').value;
+    if (!matchPassword(password, confirmPassword)) {
+        alert('Passwords do not match');
+        return;
+    }
 
+    const role = 'User';
+    const dateCreated = new Date();
 
+    //create user
+    const user = new User(uid(), email, username, fullname, password, role, dateCreated);
+    user.signup();
+}
+
+//testing login
+const login = document.getElementById('login-form');
+
+//check null or not
+if (login) {
+    login.addEventListener('submit', loginValidation);
+}
+
+//login validation
+function loginValidation(e) {
+    e.preventDefault();
+    let user = JSON.parse(localStorage.getItem('user'));
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    if (email === user.email && password === user.password) {
+        user = new User(user.id, user.email, user.username, user.fullname, user.password, user.role, user.dateCreated);
+        user.login();
+    } else {
+        alert('Please sign up first');
+        window.location.href = '../../index.html';
+    }
+}
+
+//testing logout
+function logout() {
+    let user = JSON.parse(localStorage.getItem('user'));
+    user = new User(user.id, user.email, user.username, user.fullname, user.password, user.role, user.dateCreated);
+    user.logout();
+    localStorage.clear();
+    window.location.href = '../../pages/login.html';
+}
