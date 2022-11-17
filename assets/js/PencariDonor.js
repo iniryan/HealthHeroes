@@ -1,8 +1,9 @@
 class PencariDonor  {
-         constructor(id,NamaLengkap, DateOfBirth, KotaKelahiran, Alamat, Phone, Email, NIK, KK, gender) {
+         constructor(id,NamaLengkap, DateOfBirth, Domisili, KotaKelahiran, Alamat, Phone, Email, NIK, KK, gender) {
          this.id = id;
          this.NamaLengkap = NamaLengkap;
          this.DateOfBirth = DateOfBirth;
+         this.Domisili = Domisili;
          this.KotaKelahiran = KotaKelahiran;
          this.Alamat = Alamat;
          this.Phone = Phone;
@@ -24,22 +25,27 @@ class PencariDonor  {
          }
 }
 let FormPencariDonor = document.getElementById('FormPencariDonor');
-FormPencariDonor.addEventListener('submit',(e)=>
+if(FormPencariDonor) {  
+    FormPencariDonor.addEventListener('submit', formPencari);
+}
+
+function formPencari(e)
 {
-    e.preventDefauld();
-        let.NamaLengkap = document.getElementsByName('NamaLengkap').value;
-        let.DateOfBirth = document.getElementsByName('DateOfBirth').value;
-        let.KotaKelahiran = document.getElementsByName('KotaKelahiran').value;
-        let.Alamat = document.getElementsByName('Alamat').value;
-        let.Phone = document.getElementsByName('Phone').value;
-        let.Email = document.getElementsByName('Email').value;
-        let.NIK = document.getElementsByName('NIK').value;
-        let.KK = document.getElementsByName('KK').value;
-        let gender = document.querySelectorAll('input[name="gender"]:checked');
+    e.preventDefault();
+        let NamaLengkap = document.getElementById('NamaLengkap').value;
+        let DateOfBirth = document.getElementById('DateOfBirth').value;
+        let KotaKelahiran = document.getElementById('KotaKelahiran').value;
+        let Alamat = document.getElementById('Alamat').value;
+        let Phone = document.getElementById('Phone').value;
+        let Email = document.getElementById('Email').value;
+        let NIK = document.getElementById('NIK').value;
+        let KK = document.getElementById('KK').value;
+        let Domisili = document.getElementById('Kota').value;
+        let gender = document.querySelectorAll('input[name="jenis_kelamin"]:checked');
         let genderValue = [];
-    gender.forEach((checkbox) => {
-        genderValue.push(checkbox.value);
-    });
-    letaddPencariDonor = newFormPencariDonor(1, NamaLengkap, DateOfBirth, KotaKelahiran, Alamat, Phone, Email, NIK, KK, gender);
-    console.log(addPencariDonor)
-});
+        gender.forEach((checkbox) => {
+            genderValue.push(checkbox.value);
+        });
+        let addPencariDonor = new PencariDonor(1, NamaLengkap, DateOfBirth, Domisili, KotaKelahiran, Alamat, Phone, Email, NIK, KK, gender);
+        console.log(addPencariDonor)
+}

@@ -1,5 +1,5 @@
 class DataPendonor {
-    constructor(id,NamaLengkap, DateOfBirth, KotaKelahiran, Alamat, Phone, Email, NIK, KK, gender){
+    constructor(id,NamaLengkap, DateOfBirth, KotaKelahiran, Alamat, Phone, Email, NIK, KK, gender, Domisili){
         this.id = id;
         this.NamaLengkap = NamaLengkap;
         this.DateOfBirth = DateOfBirth;
@@ -10,6 +10,7 @@ class DataPendonor {
         this.NIK = NIK;
         this.KK = KK;
         this.gender = gender;
+        this.Domisili = Domisili;
     }
     donation() {
         console.log('can donation');
@@ -19,24 +20,28 @@ class DataPendonor {
         console.log('can change data pendonor');
     }
 }
-let FormDataPendonor = document.getElementById('FormDataPendonor');
-FormDataPendonor.addEventListener('submit',(e)=>
-{
-    e.preventDefauld();
-        let.NamaLengkap = document.getElementsByName('NamaLengkap').value;
-        let.DateOfBirth = document.getElementsByName('DateOfBirth').value;
-        let.KotaKelahiran = document.getElementsByName('KotaKelahiran').value;
-        let.Alamat = document.getElementsByName('Alamat').value;
-        let.Phone = document.getElementsByName('Phone').value;
-        let.Email = document.getElementsByName('Email').value;
-        let.NIK = document.getElementsByName('NIK').value;
-        let.KK = document.getElementsByName('KK').value;
-        let gender = document.querySelectorAll('input[name="gender"]:checked');
-        let genderValue = [];
-    gender.forEach((checkbox) => {
-        genderValue.push(checkbox.value);
-    });
-    letaddDataPendonor = newFormDataPendonor(1, NamaLengkap, DateOfBirth, KotaKelahiran, Alamat, Phone, Email, NIK, KK, gender);
-    console.log(addDataPendonor)
-});
+let FormDataPendonor = document.getElementById('DataPendonor');
+if (FormDataPendonor) {
+    FormDataPendonor.addEventListener('submit', formInput);
+}    
 
+function formInput(e) 
+    {
+        e.preventDefault();
+            let NamaLengkap = document.getElementById('NamaLengkap').value;
+            let DateOfBirth = document.getElementById('DateOfBirth').value;
+            let KotaKelahiran = document.getElementById('KotaKelahiran').value;
+            let Alamat = document.getElementById('Alamat').value;
+            let Phone = document.getElementById('Phone').value;
+            let Email = document.getElementById('Email').value;
+            let NIK = document.getElementById('NIK').value;
+            let KK = document.getElementById('KK').value;
+            let Domisili = document.getElementById('Kota').value;
+            let gender = document.querySelectorAll('input[name="gender"]:checked');
+            let genderValue = [];
+            gender.forEach((checkbox) => {
+                genderValue.push(checkbox.value);
+            });
+            let addDataPendonor = new DataPendonor(1, NamaLengkap, DateOfBirth, KotaKelahiran, Alamat, Phone, Email, NIK, KK, genderValue, Domisili);
+            console.log(addDataPendonor)
+    }

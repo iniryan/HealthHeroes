@@ -55,7 +55,6 @@ FormRS.addEventListener('submit', (e) => {
     let Kecamatan = document.getElementById('kecamatan').value;
     let Kelurahan = document.getElementById('kelurahan').value;
     let KodePos = document.getElementById('kodepos').value;
-    let checkedValue = null; 
     let Fasilitas = document.querySelectorAll('input[name="fasilitas"]:checked');
     let FasilitasValue = [];
     Fasilitas.forEach((checkbox) => {
