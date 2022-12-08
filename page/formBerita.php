@@ -10,7 +10,7 @@
 <body>
     <div class="berita">
         <h1 class="CB">Create Berita</h1>
-        <form method="post" id="CreateBerita" action="formBerita.html">
+        <form method="post" id="CreateBerita" name="CreateBerita" action="prosesformberita.php">
             <p>Judul Berita</p>
                 <input type="text" name="judulBerita" id="judulBerita" placeholder="" required="required" />
                 <p>thumbnail</p>
@@ -20,6 +20,7 @@
                     </div>
                 <input type="file" name="thumbnail" id="thumbnail" placeholder="" required="required" />
                 </div>
+                <a href="">Test</a>
             <p>Kategori</p>
                 <input type="text" name="kategori" id="kategori" placeholder="" required="required" />
             <p>Isi Berita</p>
@@ -34,6 +35,6 @@
             <button type="submit" class="buton">Submit</button>
         </form>
     </div>
-    <script src="../assets/js/News.js"></script>
+    <!-- <script src="../assets/js/News.js"></script> -->
 </body>
 </html>
