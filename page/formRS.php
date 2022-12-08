@@ -93,6 +93,7 @@
             <button type="submit" class="btn-regis">Register</button>
         </form>
     </div>
-    <script src="../assets/js/FormRS.js"></script>
+    <!-- 
+        <script src="../assets/js/FormRS.js"></script> -->
 </body>
 </html>
