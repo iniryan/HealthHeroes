@@ -12,7 +12,7 @@
         <div class="box signbox">
             <div class="inner-box">
                 <div class="left-sign">
-					<form method="post" id="signup-form" action="register.html">
+					<form method="post" id="signup-form" action="proses.php">
                         <div class="heading-right">
                             <h1>Sign up</h1>
                             <h6>
@@ -66,6 +66,6 @@
             </div>
         </div>
     </div>
-    <script src="./assets/js/User.js"></script>
+    <!-- <script src="./assets/js/User.js"></script> -->
 </body>
 </html>
