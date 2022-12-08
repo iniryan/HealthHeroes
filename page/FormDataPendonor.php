@@ -8,14 +8,14 @@
 	<div class="wrap">
 		<div class="container">
 	<h1>Form Biodata Pendonor</h1>
-	<form method="post" id="DataPendonor" action="FormDataPendonor.html" >
+	<form method="post" id="DataPendonor" action="proseDataPendonor.php" >
 		<div class="input-box">
 			<label>Nama Lengkap</label> <br>
 			<input type="text" id="NamaLengkap" name="NamaLengkap" placeholder="Nama Lengkap">
 		</div>
 		<div class="input-box">
 			<label>Date Of Birth</label> <br>
-			<input type="date" id="DateOfBirth" name="Date Of Birth" placeholder="Date Of Birth">
+			<input type="date" id="DateOfBirth" name="DateOfBirth" placeholder="Date Of Birth">
 		</div>
 		
 		<div class="input-box">
@@ -73,6 +73,6 @@
 
 </div>
 </div>
-<script src="../assets/js/DataPendonor.js"></script>
+<!-- <script src="../assets/js/DataPendonor.js"></script> -->
 </body>
 </html>
