@@ -9,7 +9,7 @@
 	<div class="container">
 	<h1>Form Biodata Volunteer</h1>
 	
-	<Form method="post" id="Volunteer" action="../page/formVolunteer.html">
+	<Form method="post" id="Volunteer" name='p' action="prosesVolunteer.php">
 			<div class="input-label">
 				<label>Nama Lengkap</label> <br>
 				<input type="Text" id="nama" name="FirstName" placeholder="Nama Lengkap">
@@ -47,7 +47,7 @@
 			</div> 
 			<div class="input-label">
 				<label>No Hp</label> <br>
-				<input type="No Hp" id="no_hp" name="No Hp" placeholder="No Hp">
+				<input type="No Hp" id="no_hp" name="No_Hp" placeholder="No Hp">
 			</div>
 			<div class="input-label">
 				<label>Email</label> <br>
@@ -72,6 +72,6 @@
 </div>
 </div>
 
-<script src="../assets/js/Volunteer.js"></script>
+<!-- <script src="../assets/js/Volunteer.js"></script> -->
 </body>
 </html>
