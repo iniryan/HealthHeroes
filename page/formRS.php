@@ -14,7 +14,7 @@
 <body>
     <div class="formRs">
         <h1>Form Pendaftaran Rumah Sakit</h1>
-        <form method="post" id="FormRS" action="formRS.html">
+        <form method="post" id="FormRS" action="processformRS.php">
             <div class="container">
                 <div class="left">
                         <!-- <input type="hidden" name="idRS" id="idRS" required/> -->
