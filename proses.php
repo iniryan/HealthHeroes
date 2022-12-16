@@ -1,15 +1,16 @@
 <?php
 
+require 'oop-try.php';
+
 $name = $_POST['fullname'];
 $user = $_POST['username'];
 $email = $_POST['email'];
 $pass = $_POST['password'];
 $confirm = $_POST['confirm-password'];
 
-echo $name.' ';
-echo $user.' ';
-echo $email.' ';
-echo $pass.' ';
-echo $confirm.' ';
-
+$signUser = new User($email, $name, $user, $pass, 'pengguna', date('Y-m-d'));
+$signUser->signup();
+// echo '<pre>';
+// var_dump($signUser);
+// echo '</pre>';
 ?>

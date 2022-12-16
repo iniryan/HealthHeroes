@@ -17,7 +17,7 @@
                             <h1>Sign up</h1>
                             <h6>
                                 Already have an account?
-                                <a href="./page/login.html">Log in</a>
+                                <a href="./page/php/login.php">Log in</a>
                             </h6>
                         </div>
                         <div class="input-wrap">

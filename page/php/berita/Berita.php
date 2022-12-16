@@ -1,7 +1,6 @@
 <?php
     class Berita {
 
-        public $id;
         public $title;
         public $thumbnail;
         public $kategori;
@@ -10,9 +9,8 @@
         public $tanggalwaktu;
         public $tag;
 
-        public function __construct ($id, $title, $thumbnail, $kategori, $isiberita, $author, $tanggalwaktu, $tag)
+        public function __construct ($title, $thumbnail, $kategori, $isiberita, $author, $tanggalwaktu, $tag)
         {
-            $this->id           = $id;
             $this->title        = $title;
             $this->thumbnail    = $thumbnail;
             $this->kategori     = $kategori;

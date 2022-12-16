@@ -9,7 +9,7 @@ $author = $_POST['author'];
 $tanggal = $_POST['tanggalDibuat'];
 $tag = $_POST['tag'];
 
-$news = new Berita(69, $judul, $thumb, $kategori, $berita, $author, $tanggal, $tag);
+$news = new Berita($judul, $thumb, $kategori, $berita, $author, $tanggal, $tag);
     echo"<pre>";
     var_dump($news);
     echo"</pre>";

@@ -1,7 +1,6 @@
 <?php
 //id, NamaRumahSakit, Alamat, Fasilitas, Deskripsi, Website, Email, Telepon, Provinsi, Kota, Kecamatan, Kelurahan, KodePos
-   class formRS {
-    public $id;
+   class FormRS {
     public $NamaRumahSakit;
     public $Alamat;
     public $Fasilitas;
@@ -15,8 +14,7 @@
     public $Kelurahan;
     public $KodePos;
 
-    public function __construct($id, $NamaRumahSakit, $Alamat, $Fasilitas, $Deskripsi, $Website, $Email, $Telepon, $Provinsi, $Kota, $Kecamatan, $Kelurahan, $KodePos) {
-        $this->id = $id;
+    public function __construct($NamaRumahSakit, $Alamat, $Fasilitas, $Deskripsi, $Website, $Email, $Telepon, $Provinsi, $Kota, $Kecamatan, $Kelurahan, $KodePos) {
         $this->NamaRumahSakit = $NamaRumahSakit;
         $this->Alamat = $Alamat;
         $this->Fasilitas = $Fasilitas;
