@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <form method="post" id="login-form" action="login.html">
+                    <form method="post" id="login-form" action="./process/prosesUser.php">
                         <div class="heading-right">
                             <h1>Log in</h1>
                             <h6>

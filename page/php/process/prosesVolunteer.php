@@ -1,6 +1,6 @@
 <?php
 
-require 'oopVolunteer.php';
+require '../class/Volunteer.php';
 
 $nama = $_POST['FirstName'];
 $kota = $_POST['kota'];

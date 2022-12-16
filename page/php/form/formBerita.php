@@ -10,7 +10,7 @@
 <body>
     <div class="berita">
         <h1 class="CB">Create Berita</h1>
-        <form method="post" id="CreateBerita" name="CreateBerita" action="prosesformberita.php">
+        <form method="post" id="CreateBerita" name="CreateBerita" action="../process/prosesBerita.php">
             <p>Judul Berita</p>
                 <input type="text" name="judulBerita" id="judulBerita" placeholder="" required="required" />
                 <p>thumbnail</p>

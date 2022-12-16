@@ -8,7 +8,7 @@
 	<div class="wrap">
 		<div class="container">
 	<h1>Form Biodata Pendonor</h1>
-	<form method="post" id="DataPendonor" action="proseDataPendonor.php" >
+	<form method="post" id="DataPendonor" action="../process/prosesDataPendonor.php" >
 		<div class="input-box">
 			<label>Nama Lengkap</label> <br>
 			<input type="text" id="NamaLengkap" name="NamaLengkap" placeholder="Nama Lengkap">

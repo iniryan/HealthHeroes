@@ -11,7 +11,7 @@
     <div class="formKategori">
         <div class="wrape">
             <h1>Form Kategori</h1>
-            <form method="post" action="prosesKategori.php">
+            <form method="post" action="../process/prosesKategori.php">
                 <div class="input-wrap kategori-wrap">
                     <input type="text" class="input-field kategori" name="nama_kategori" id="nama_kategori" placeholder="Contoh: Donor Darah" required="required" />
                 </div>

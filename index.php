@@ -12,7 +12,7 @@
         <div class="box signbox">
             <div class="inner-box">
                 <div class="left-sign">
-					<form method="post" id="signup-form" action="proses.php">
+					<form method="post" id="signup-form" action="./page/php/process/prosesUser.php">
                         <div class="heading-right">
                             <h1>Sign up</h1>
                             <h6>

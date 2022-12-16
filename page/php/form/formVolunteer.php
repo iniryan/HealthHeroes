@@ -9,7 +9,7 @@
 	<div class="container">
 	<h1>Form Biodata Volunteer</h1>
 	
-	<Form method="post" id="Volunteer" name='formVolunteer' action="prosesVolunteer.php">
+	<Form method="post" id="Volunteer" name='formVolunteer' action="../process/prosesVolunteer.php">
 			<div class="input-label">
 				<label>Nama Lengkap</label> <br>
 				<input type="Text" id="nama" name="FirstName" placeholder="Nama Lengkap">

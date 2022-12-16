@@ -1,6 +1,6 @@
 <?php   
 
-    require 'oopFormRS.php';
+    require '../class/FormRS.php';
 
     $namaRS =  $_POST['namaRS'];
     $deskripsi =  $_POST['deskripsi'];

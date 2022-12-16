@@ -18,7 +18,7 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="../index.php">Sign up</a>
+                                <a href="../../index.php">Sign up</a>
                             </li>
                             <li>
                                 <a href="./login.php">Log in</a>
@@ -27,22 +27,22 @@
                                 <a href="./formPencarian.php">Search</a>
                             </li>
                             <li>
-                                <a href="./rs/formRS.php">Hospital partners</a>
+                                <a href="./form/formRS.php">Hospital partners</a>
                             </li>
                             <li>
-                                <a href="./pendonor/FormBiodata.php">Bio</a>
+                                <a href="./form/FormBiodata.php">Bio</a>
                             </li>
                             <li>
-                                <a href="./pendonor/FormDataPendonor.php">Donorer</a>
+                                <a href="./form/FormDataPendonor.php">Donorer</a>
                             </li>
                             <li>
-                                <a href="./volunteer/formVolunteer.php">Volunteer</a>
+                                <a href="./form/formVolunteer.php">Volunteer</a>
                             </li>
                             <li>
-                                <a href="./berita/formBerita.php">News</a>
+                                <a href="./form/formBerita.php">News</a>
                             </li>
                             <li>
-                                <a href="./kategori/formAddCategory.php">Add Category News</a>
+                                <a href="./form/formAddCategory.php">Add Category News</a>
                             </li>
                             <li>
                                 <a href="./login.php" onclick="return logout();">Logout</a>

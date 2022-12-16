@@ -1,6 +1,6 @@
 <?php
 
-require 'oop-try.php';
+require '../class/User.php';
 
 $name = $_POST['fullname'];
 $user = $_POST['username'];

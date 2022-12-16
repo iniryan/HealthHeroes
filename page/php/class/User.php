@@ -1,53 +1,44 @@
 <?php
     // author: ryn
+    require 'Database.php';
     class User {
-        public $id;
+        // properties
         public $email;
         public $fullname;
+        public $username;
         public $password;
         public $role;
         public $dateCreated;
 
-        public function __construct($id, $email, $fullname, $password, $role, $dateCreated) {
-            $this->id = $id;
+        // constructor
+        public function __construct($email, $fullname, $username, $password, $role, $dateCreated) {
             $this->email = $email;
             $this->fullname = $fullname;
+            $this->username = $username;
             $this->password = $password;
             $this->role = $role;
             $this->dateCreated = $dateCreated;
         }
-        
+
+        //function signup
         public function signup() {
-            echo $this->name . ' signed up';
+            //check Null
+            
         }
 
+        //function login
         public function login() {
             echo $this->name . ' logged in';
         }
 
+        //function logout
         public function logout() {
             echo $this->name . ' logged out';
         }
 
+        //function forgot password
         public function forgotPassword() {
             echo $this->name . ' forgot password';
         }
-
-        public function __destruct() {
-            echo 'destructor ran...';
-        }
     }
-
-    $user1 = new User(1, 'halo@test.com', 'Halo', '123', 'admin', '2022-01-01');
-    $user1->signup();
-    $user1->login();
-    echo $user1->id;
-    echo $user1->email;
-    echo $user1->fullname;
-    echo $user1->password;
-    echo $user1->role;
-    echo $user1->dateCreated;
-    $user1->forgotPassword();
-    $user1->logout();
-    unset($user1);
 ?>

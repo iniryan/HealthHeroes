@@ -11,7 +11,7 @@
     <div class="formPencarian">
         <div class="wrape">
             <h1>Form Pencarian Pendonor Organ</h1>
-            <form method="get" action="formPencarian.html">
+            <form method="get" action="/">
                 <div class="input-wrap search-wrap">
                     <input type="text" class="input-field search" name="organ" id="organ" placeholder="Masukkan donor yang sedang kamu cari..." required="required" />
                 </div>

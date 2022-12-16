@@ -1,6 +1,6 @@
 <?php
 
-require 'oopDataPendonor.php';
+require '../class/DataPendonor.php';
 
 $nama = $_POST['NamaLengkap'];
 $date = $_POST['DateOfBirth'];

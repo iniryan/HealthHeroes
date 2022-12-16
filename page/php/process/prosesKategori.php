@@ -1,6 +1,6 @@
 <?php
 
-require 'oopKategori.php';
+require '../class/Kategori.php';
 
 $name = $_POST['nama_kategori'];
 $desc = $_POST['deskripsi_kategori'];

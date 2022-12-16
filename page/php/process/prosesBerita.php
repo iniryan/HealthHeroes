@@ -1,5 +1,5 @@
 <?php
-require 'Berita.php';
+require '../class/Berita.php';
 
 $judul = $_POST['judulBerita'];
 $thumb = $_POST['thumbnail'];
