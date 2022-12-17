@@ -30,6 +30,8 @@
             $stmt->bindParam(':email', $this->email);
             $stmt->bindParam(':fullname', $this->fullname);
             $stmt->bindParam(':username', $this->username);
+            //encrypt password
+            $this->password = password_hash($this->password, PASSWORD_DEFAULT);
             $stmt->bindParam(':password', $this->password);
             $stmt->bindParam(':role', $this->role);
             $stmt->bindParam(':dateCreated', $this->dateCreated);
