@@ -22,23 +22,54 @@
 
         //function signup
         public function signup() {
-            //check Null
-            
+            //insert to database
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "INSERT INTO users (email, fullname, username, password, role, dateCreated) VALUES (:email, :fullname, :username, :password, :role, :dateCreated)";
+            $stmt = $db->prepare($query);
+            $stmt->bindParam(':email', $this->email);
+            $stmt->bindParam(':fullname', $this->fullname);
+            $stmt->bindParam(':username', $this->username);
+            $stmt->bindParam(':password', $this->password);
+            $stmt->bindParam(':role', $this->role);
+            $stmt->bindParam(':dateCreated', $this->dateCreated);
+            $stmt->execute();
+            $url = 'http://localhost/HealthHeroes';
+            header('Location: '.$url.'/page/php/home.php');
         }
 
         //function login
         public function login() {
-            echo $this->name . ' logged in';
+            //login from database
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "SELECT * FROM users WHERE email = :email AND password = :password";
+            $stmt = $db->prepare($query);
+            $stmt->bindParam(':email', $this->email);
+            $stmt->bindParam(':password', $this->password);
+            $stmt->execute();
+            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($row) {
+                session_start();
+                $_SESSION['email'] = $row['email'];
+                $_SESSION['role'] = $row['role'];
+                $url = 'http://localhost/HealthHeroes';
+                header('Location: '.$url.'/page/php/home.php');
+            } else {
+                echo 'Email atau password salah';
+            }
         }
 
         //function logout
         public function logout() {
-            echo $this->name . ' logged out';
+            //destroy session
+            session_start();
+            session_destroy();
         }
 
         //function forgot password
         public function forgotPassword() {
-            echo $this->name . ' forgot password';
+            echo 'forgot password';
         }
     }
 ?>
