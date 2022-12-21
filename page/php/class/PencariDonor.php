@@ -1,4 +1,5 @@
 <?php
+require '../class/Database.php';
     class PencariDonor {
         public $NamaLengkap;
         public $DateOfBirth;
@@ -30,7 +31,12 @@
         }
 
         public function findDonation() {
-            echo $this->name . ' can findDonation';
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "INSERT INTO `mitra` (`nama`, `dateofbirth`, `kotakelahiran`, `alamatrumah`, `phone`, `email`, `nik`, `nokk`, `kota`, `gender`, `status`, `dateCreated` ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+            $statement = $db->prepare($query);
+            $parameters = [$this->NamaLengkap,$this->DateOfBirth,$this->KotaKelahiran,$this->Alamat,$this->Phone,$this->Email,$this->NIK,$this->KK,$this->Kota,$this->Gender ,2, date('Y-m-d')];
+            return $statement->execute($parameters); 
         }
         public function getDonation() {
             echo $this->name . ' can getDonation';

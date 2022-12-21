@@ -14,9 +14,12 @@ $kota = $_POST['kota'];
 $gender = $_POST['gender'];
 
 $dataPendonor = new DataPendonor($nama, $date, $TTL, $alamat, $phone, $email, $nik, $kk, $kota, $gender);
-echo"<pre>";
-var_dump($kategori);
-echo"</pre>";
+$dataPendonor->donation();
+$url = 'http://localhost/HealthHeroes';
+header('Location: '.$url.'/page/php/home.php');
+// echo"<pre>";
+// var_dump($kategori);
+// echo"</pre>";
 
 
 // echo $nama;

@@ -14,9 +14,12 @@ $nik = $_POST['nik'];
 $nokk = $_POST['no_kk'];
 
 $volunteer = new Volunteer($nama, $kota, $date, $gender, $alamat, $asal, $nohp, $email, $nik, $nokk);
-echo"<pre>";
-var_dump($volunteer);
-echo"</pre>";
+$volunteer->becomeVolunteer();
+$url = 'http://localhost/HealthHeroes';
+header('Location: '.$url.'/page/php/home.php');
+// echo"<pre>";
+// var_dump($volunteer);
+// echo"</pre>";
 
 // echo $nama.'<br>';
 // echo $kota.'<br>';

@@ -14,9 +14,12 @@ $kota = $_POST['Kota'];
 $gender = $_POST['jenis_kelamin'];
 
 $pencariDonor = new PencariDonor($nama, $date, $TTL, $alamat, $phone, $email, $nik, $kk, $kota, $gender);
-echo"<pre>";
-var_dump($pencariDonor);
-echo"</pre>";
+$pencariDonor->findDonation(); 
+$url = 'http://localhost/HealthHeroes';
+header('Location: '.$url.'/page/php/home.php');
+// echo"<pre>";
+// var_dump($pencariDonor);
+// echo"</pre>";
 
 
 // echo $nama;
