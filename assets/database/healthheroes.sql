@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2022 at 11:11 AM
+-- Generation Time: Dec 21, 2022 at 07:57 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `healthheroes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mitra`
+--
+
+CREATE TABLE `mitra` (
+  `id_mitra` int(11) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `dateofbirth` date NOT NULL,
+  `kotakelahiran` varchar(128) NOT NULL,
+  `alamatrumah` text NOT NULL,
+  `phone` varchar(60) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `nik` varchar(100) NOT NULL,
+  `nokk` varchar(100) NOT NULL,
+  `kota` varchar(30) NOT NULL,
+  `gender` varchar(15) NOT NULL,
+  `status` int(11) NOT NULL,
+  `dateCreated` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -42,6 +64,12 @@ CREATE TABLE `users` (
 --
 
 --
+-- Indexes for table `mitra`
+--
+ALTER TABLE `mitra`
+  ADD PRIMARY KEY (`id_mitra`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -50,6 +78,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `mitra`
+--
+ALTER TABLE `mitra`
+  MODIFY `id_mitra` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
