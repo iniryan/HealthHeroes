@@ -54,5 +54,6 @@
     }
 }
 
+//RumahSakit = newRumahSakit ("223", "rs ibunda", )
 
     
