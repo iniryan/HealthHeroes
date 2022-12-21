@@ -10,9 +10,13 @@ $tanggal = $_POST['tanggalDibuat'];
 $tag = $_POST['tag'];
 
 $news = new Berita($judul, $thumb, $kategori, $berita, $author, $tanggal, $tag);
-    echo"<pre>";
-    var_dump($news);
-    echo"</pre>";
+$news->addnews();
+$url = 'http://localhost/HealthHeroes';
+header('Location: '.$url.'/page/php/home.php');
+
+    // echo"<pre>";
+    // var_dump($news);
+    // echo"</pre>";
 
     // $news->addnews();
     // $news->deletenews();

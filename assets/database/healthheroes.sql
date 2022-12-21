@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2022 at 09:06 AM
+-- Generation Time: Dec 21, 2022 at 05:40 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `healthheroes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `berita`
+--
+
+CREATE TABLE `berita` (
+  `id_berita` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `thumb` varchar(255) NOT NULL,
+  `kategori` varchar(255) NOT NULL,
+  `isiberita` text NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  `tag` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `berita`
+--
+
+INSERT INTO `berita` (`id_berita`, `judul`, `thumb`, `kategori`, `isiberita`, `author`, `date`, `tag`) VALUES
+(1, 'tembikers', 'Skipper 2.jpg', 'donor', 'dasjkfhajkhfasjfjahajkhasfhk', 'mamakkau', '2022-12-21 23:39:00', 'djakldjakdk');
 
 -- --------------------------------------------------------
 
@@ -101,6 +125,12 @@ INSERT INTO `users` (`id_user`, `email`, `fullname`, `username`, `password`, `ro
 --
 
 --
+-- Indexes for table `berita`
+--
+ALTER TABLE `berita`
+  ADD PRIMARY KEY (`id_berita`);
+
+--
 -- Indexes for table `rs`
 --
 ALTER TABLE `rs`
@@ -115,6 +145,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `berita`
+--
+ALTER TABLE `berita`
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `rs`

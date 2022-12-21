@@ -1,4 +1,6 @@
 <?php
+
+    require '../class/Database.php';
     class Berita {
 
         public $title;
@@ -21,7 +23,12 @@
         }
 
         public function addnews() {
-            echo $this->author . 'can add news';
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "INSERT INTO `berita` (`judul`, `thumb`, `kategori`, `isiberita`, `author`, `date`, `tag` ) VALUES (?,?,?,?,?,?,?)";
+            $statement = $db->prepare($query);
+            $parameters = [$this->title, $this->thumbnail, $this->kategori, $this->isiberita, $this->author, $this->tanggalwaktu, $this->tag];
+            return $statement->execute($parameters);
         }
 
         public function deletenews() {
