@@ -12,12 +12,12 @@
         <div class="box signbox">
             <div class="inner-box">
                 <div class="left-sign">
-					<form method="post" id="signup-form" action="proses.php">
+					<form method="post" id="signup-form" action="./page/php/process/prosesUser.php">
                         <div class="heading-right">
                             <h1>Sign up</h1>
                             <h6>
                                 Already have an account?
-                                <a href="./page/login.html">Log in</a>
+                                <a href="./page/php/login.php">Log in</a>
                             </h6>
                         </div>
                         <div class="input-wrap">

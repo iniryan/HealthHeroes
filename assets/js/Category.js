@@ -1,8 +1,9 @@
 class Category {
-    constructor(id, categoryName)
+    constructor(id, categoryName, desc)
     {
         this.id           = id;
         this.categoryName = categoryName;
+        this.desc         = desc;
     }
 
     addcattegory() {
