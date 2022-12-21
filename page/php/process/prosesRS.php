@@ -16,9 +16,12 @@
     $fasilitas =  $_POST['fasilitas'];
 
     $formRS = new FormRS($namaRS, $alamat, $fasilitas, $deskripsi, $website, $email, $notelp, $provinsi, $kota, $kecamatan, $kelurahan, $kodepos);
-    echo"<pre>";
-    var_dump($formRS);
-    echo"</pre>";
+    // echo"<pre>";
+    // var_dump($formRS);
+    // echo"</pre>";
+    $formRS->addRumahSakit();
+    $url = 'http://localhost/HealthHeroes';
+    header('Location: '.$url.'/page/php/home.php');
 
     // echo $namaRS.'<br>';
     // echo $deskripsi.'<br>';

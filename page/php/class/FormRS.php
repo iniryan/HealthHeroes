@@ -1,5 +1,6 @@
+
 <?php
-//id, NamaRumahSakit, Alamat, Fasilitas, Deskripsi, Website, Email, Telepon, Provinsi, Kota, Kecamatan, Kelurahan, KodePos
+require '../class/Database.php';
    class FormRS {
     public $NamaRumahSakit;
     public $Alamat;
@@ -29,8 +30,19 @@
         $this->KodePos = $KodePos;
     }
 
-    public function addRumahSakit() {
-        echo $this->name . ' add rumahSakit';
+   
+
+
+
+
+
+public function addRumahSakit() {
+    $database = new Database('localhost', 'healthheroes', 'root', '');
+    $db = $database->getConnection();
+    $query = "INSERT INTO `rs` (`namaRS`, `deskripsi`, `website`, `email`, `notelp`, `alamat`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `kodepos`, `dateCreated` ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";
+    $statement = $db->prepare($query);
+    $parameters = [$this->NamaRumahSakit,$this->Deskripsi,$this->Website,$this->Email,$this->Telepon,$this->Alamat,$this->Provinsi,$this->Kota,$this->Kecamatan,$this->Kelurahan,$this->KodePos,date('Y-m-d')];
+    return $statement->execute($parameters); 
     }
 
     public function editRumahSakit() {
