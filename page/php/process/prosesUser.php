@@ -10,6 +10,8 @@ $confirm = $_POST['confirm-password'];
 
 $signUser = new User($email, $name, $user, $pass, 'pengguna', date('Y-m-d'));
 $signUser->signup();
+$url = 'http://localhost/HealthHeroes';
+header('Location: '.$url.'/page/php/home.php');
 // echo '<pre>';
 // var_dump($signUser);
 // echo '</pre>';

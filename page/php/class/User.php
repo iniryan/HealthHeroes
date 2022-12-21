@@ -25,19 +25,12 @@
             //insert to database
             $database = new Database('localhost', 'healthheroes', 'root', '');
             $db = $database->getConnection();
-            $query = "INSERT INTO users (email, fullname, username, password, role, dateCreated) VALUES (:email, :fullname, :username, :password, :role, :dateCreated)";
+            $query = "INSERT INTO users (email, fullname, username, password, role, dateCreated) VALUES (?, ?, ?, ?, ?, ?)";
             $stmt = $db->prepare($query);
-            $stmt->bindParam(':email', $this->email);
-            $stmt->bindParam(':fullname', $this->fullname);
-            $stmt->bindParam(':username', $this->username);
+            // $params = [$this->email, $this->fullname, $this->username, $this->password, $this->role, $this->dateCreated];
             //encrypt password
-            $this->password = password_hash($this->password, PASSWORD_DEFAULT);
-            $stmt->bindParam(':password', $this->password);
-            $stmt->bindParam(':role', $this->role);
-            $stmt->bindParam(':dateCreated', $this->dateCreated);
-            $stmt->execute();
-            $url = 'http://localhost/HealthHeroes';
-            header('Location: '.$url.'/page/php/home.php');
+            $params = [$this->email, $this->fullname, $this->username, password_hash($this->password, PASSWORD_DEFAULT), $this->role, $this->dateCreated];
+            return $stmt->execute($params);
         }
 
         //function login
