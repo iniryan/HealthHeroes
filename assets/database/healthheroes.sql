@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 21, 2022 at 07:57 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Dec 21, 2022 at 09:06 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,7 +41,37 @@ CREATE TABLE `mitra` (
   `gender` varchar(15) NOT NULL,
   `status` int(11) NOT NULL,
   `dateCreated` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rs`
+--
+
+CREATE TABLE `rs` (
+  `id_rs` int(11) NOT NULL,
+  `namaRS` varchar(255) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `website` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `notelp` varchar(14) NOT NULL,
+  `alamat` text NOT NULL,
+  `provinsi` varchar(128) NOT NULL,
+  `kota` varchar(128) NOT NULL,
+  `kecamatan` varchar(128) NOT NULL,
+  `kelurahan` varchar(128) NOT NULL,
+  `kodepos` varchar(14) NOT NULL,
+  `dateCreated` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `rs`
+--
+
+INSERT INTO `rs` (`id_rs`, `namaRS`, `deskripsi`, `website`, `email`, `notelp`, `alamat`, `provinsi`, `kota`, `kecamatan`, `kelurahan`, `kodepos`, `dateCreated`) VALUES
+(1, 'mamang', 'asd', 'https://docs.google.com/spreadsheets/d/1pQfbV2AnHHlte4BU7LSR3E6R6D3R0nP-75MlmIaI7o8/edit#gid=121364292', 'aaaaaa@gmail.com', '12345', 'ssssssss', 'Jawa Barat', 'Bandung', 'Bandung', 'Bandung', '1', '2022-12-21'),
+(2, 'scscsc', 'asdfg', 'https://docs.google.com/spreadsheets/d/1pQfbV2AnHHlte4BU7LSR3E6R6D3R0nP-75MlmIaI7o8/edit#gid=121364292', 'aaaaaa@gmail.com', '12345', 'ssssssss', 'Jawa Barat', 'Bandung', 'Bandung', 'Bandung', '1', '2022-12-21');
 
 -- --------------------------------------------------------
 
@@ -57,17 +87,24 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
   `dateCreated` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id_user`, `email`, `fullname`, `username`, `password`, `role`, `dateCreated`) VALUES
+(1, 'asdfghjk@m.com', 'asdfghj', 'asdfghjk', '$2y$10$yGYUu.kO84m9QlHZ1F9qEuVWH65gpryjG/pflMe6ahxmLD2/Tk2H.', 'pengguna', '2022-12-21');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `mitra`
+-- Indexes for table `rs`
 --
-ALTER TABLE `mitra`
-  ADD PRIMARY KEY (`id_mitra`);
+ALTER TABLE `rs`
+  ADD PRIMARY KEY (`id_rs`);
 
 --
 -- Indexes for table `users`
@@ -80,16 +117,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `mitra`
+-- AUTO_INCREMENT for table `rs`
 --
-ALTER TABLE `mitra`
-  MODIFY `id_mitra` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `rs`
+  MODIFY `id_rs` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
