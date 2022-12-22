@@ -1,4 +1,6 @@
-<?php 
+<?php   
+    require 'Database.php';
+    require 'User.php';
     class Administrator extends User {
         // properties
         public $id;
@@ -22,17 +24,31 @@
 
         //delete user
         public function deleteUser($id) {
-            echo 'delete user';
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "DELETE FROM users WHERE id = ?";
+            $stmt = $db->prepare($query);
+            $params = [$id];
+            return $stmt->execute($params);
         }
 
         //update user
         public function updateUser($id) {
-            echo 'update user';
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "UPDATE users SET email = ?, fullname = ?, username = ?, password = ?, role = ?, dateCreated = ? WHERE id = ?";
+            $stmt = $db->prepare($query);
+            $params = [$this->email, $this->fullname, $this->username, password_hash($this->password, PASSWORD_DEFAULT), $this->role, $this->dateCreated, $id];
+            return $stmt->execute($params);
         }
 
         //get user
-        public function getUser($id) {
-            echo 'get user';
+        public static function getUser() {
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "SELECT * FROM users";
+            $stmt = $db->prepare($query);
+            return $stmt->fetchAll();
         }
 
         //block user

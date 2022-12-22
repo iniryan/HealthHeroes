@@ -23,13 +23,19 @@
         //function signup
         public function signup() {
             //insert to database
+            //objek// 
             $database = new Database('localhost', 'healthheroes', 'root', '');
+            //koneksi
             $db = $database->getConnection();
+            //query database mysql
             $query = "INSERT INTO users (email, fullname, username, password, role, dateCreated) VALUES (?, ?, ?, ?, ?, ?)";
+            //statement u/ prepare query
             $stmt = $db->prepare($query);
+            //paraameter yg akan di eksekusi
             // $params = [$this->email, $this->fullname, $this->username, $this->password, $this->role, $this->dateCreated];
             //encrypt password
             $params = [$this->email, $this->fullname, $this->username, password_hash($this->password, PASSWORD_DEFAULT), $this->role, $this->dateCreated];
+            //eksekusi query
             return $stmt->execute($params);
         }
 
@@ -53,6 +59,24 @@
             } else {
                 echo 'Email atau password salah';
             }
+        }
+
+        public static function getUser() {
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "SELECT * FROM users";
+            $stmt = $db->prepare($query);
+             $stmt->execute();
+             return $stmt->fetchAll();
+        }
+
+        public static function deleteUser($id) {
+            $database = new Database('localhost', 'healthheroes', 'root', '');
+            $db = $database->getConnection();
+            $query = "DELETE FROM users WHERE id = :id";
+            $stmt = $db->prepare($query);
+            $params = ['id' => $id];
+            $stmt->execute($params);
         }
 
         //function logout

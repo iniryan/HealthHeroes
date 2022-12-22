@@ -66,6 +66,40 @@
             </div>
         </div>
     </div>
+    <?php 
+        require './page/php/class/User.php';
+
+        // require './page/php/class/Administrator.php';
+    ?>
+    <div class="container">
+        <table style="border: 1px solid black; padding: 12px; margin-right: 12px; text-align: center;">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Role</th>
+                    <th>dateCreated</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- looping data from database -->
+                
+                <?php 
+                // var_dump(User::getUser());
+                foreach(User::getUser() as $me): ?>
+                <tr>
+                    <td id="fullname"><?= $me['fullname']; ?></td>
+                    <td id="username"><?= $me['username']; ?></td>
+                    <td id="email"><?= $me['email']; ?></td>
+                    <td id="password"><?= $me['password']; ?></td>
+                    <td id="role"><?= $me['role']; ?></td>
+                    <td id="dateCreated"><?= $me['dateCreated']; ?></td>
+                </tr>
+                <?php endforeach; ?>
+        </table>
+    </div>
     <!-- <script src="./assets/js/User.js"></script> -->
 </body>
 </html>
